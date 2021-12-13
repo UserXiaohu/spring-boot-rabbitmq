@@ -14,6 +14,7 @@ public class ProducerImpl implements Producer{
 	@Autowired
 	RabbitTemplate rabbitTemplate;
 	public void sendMail(String queue,Mail mail) {
+		//生产者业务代码
 		rabbitTemplate.convertAndSend(queue,mail);
 	}
 
